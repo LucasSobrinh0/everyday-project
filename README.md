@@ -5,3 +5,5 @@
 GitHub Profile Viewer - pip install requests
 
 Fruit Calorie API - pip install flask
+
+Video to GIF - pip install moviepy
