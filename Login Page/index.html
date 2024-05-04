@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.18/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(17 24 39);
+        }
+
+        .input-3d {
+            background-color: white;
+            border: none;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .input-3d:focus {
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .form-container {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 8px;
+            color: #cbd5e0;
+        }
+
+        .register-link:hover {
+            color: #bfdbfe;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+    <div class="form-container max-w-md w-full bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-center text-white mb-6">Log In</h2>
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-white">Username</label>
+                <input type="text" id="username" name="username"
+                    class="input-3d mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none sm:text-sm"
+                    required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-white">Password</label>
+                <input type="password" id="password" name="password"
+                    class="input-3d mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none sm:text-sm"
+                    required>
+            </div>
+            <button type="submit"
+                class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Log In
+            </button>
+            <a href="/register" class="register-link">Don't have an account? Sign up here!</a>
+        </form>
+    </div>
+</body>
+
+</html>
